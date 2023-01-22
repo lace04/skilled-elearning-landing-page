@@ -1,0 +1,313 @@
+@use 'initial';
+@use 'variables' as v;
+
+body {
+  width: 375px;
+  margin: auto;
+  @media (min-width: 768px) {
+    width: 768px;
+    position: relative;
+  }
+  @media (min-width: 1440px) {
+    width: 1440px;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: v.$bunting;
+  margin: 24px 1rem 1rem 1rem;
+  height: 28px;
+  &__logo {
+    width: 89px;
+    height: 35pxpx;
+  }
+  &__button {
+    width: 140px;
+    height: 48px;
+    background: v.$bunting;
+    color: v.$white;
+    border-radius: 28px;
+    font: v.$Font;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 28px;
+    &:hover {
+      cursor: pointer;
+      background: v.$scampi;
+    }
+  }
+}
+
+.intro {
+  &__title {
+    color: v.$bunting;
+    font: v.$Font;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 50px;
+    margin: 3rem 1rem 26px 1rem;
+  }
+  &__paragraph {
+    color: v.$waterloo;
+    margin: 1rem;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+  }
+  &__button {
+    background: v.$backgroundOR;
+    width: 167px;
+    height: 56px;
+    border-radius: 31.5px;
+    margin: 8px 1rem;
+    font: v.$Font;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 26px;
+    color: v.$white;
+    &:hover {
+      cursor: pointer;
+      background: v.$bgbtnOR;
+    }
+  }
+  &__image {
+    background: {
+      image: url('../assets/image-hero-mobile.png');
+      repeat: no-repeat;
+      position: center;
+      size: 435px 409px;
+    }
+    width: 100%;
+    height: 386px;
+    margin: 30px auto 0;
+  }
+}
+
+.intro {
+  &__card {
+    margin: 0 1rem 0;
+    background: v.$backgroundOR;
+    width: 343px;
+    height: 120px;
+    border-radius: 10px;
+    color: v.$white;
+    padding: 1.5rem;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 32px;
+  }
+}
+
+.card {
+  padding: 1rem;
+  padding-bottom: 0;
+  width: 90%;
+  margin: 2.5rem auto;
+  border-radius: 10px;
+  background: v.$white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  &__logo {
+    position: relative;
+    top: -45px;
+    display: block;
+    width: 56px;
+  }
+  &__title {
+    color: v.$bunting;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 25.2px;
+    margin-bottom: 18px;
+  }
+  &__description {
+    color: v.$waterloo;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26px;
+  }
+  &__link {
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 1.5rem;
+    color: v.$violet-red;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 28px;
+    margin-bottom: 32px;
+    &:hover {
+      color: v.$carnation-pink;
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  background-color: v.$bunting;
+  height: 7rem;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    color: v.$white;
+    width: 100%;
+  }
+  &__logo {
+    width: 89px;
+  }
+  &__button {
+    width: 140px;
+    height: 48px;
+    background: v.$backgroundBR;
+    border-radius: 28px;
+    font: v.$Font;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 28px;
+    color: v.$white;
+    &:hover {
+      cursor: pointer;
+      background: v.$bgbtnBR;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .hero__image {
+    position: absolute;
+    top: -110px;
+    right: 0;
+    width: 50%;
+    height: 80vh;
+    background: {
+      image: url('../assets/image-hero-tablet.png');
+      repeat: no-repeat;
+    }
+  }
+  .header {
+    width: 689px;
+    height: 48px;
+    margin-left: 0px;
+    &__button {
+      z-index: 1;
+    }
+  }
+
+  .main-wrapper {
+    width: 90%;
+    margin: auto;
+    margin-bottom: 86px;
+  }
+
+  .intro {
+    width: 430px;
+    height: 284px;
+    margin-left: -15px;
+    display: flex;
+    &__image {
+      display: none;
+    }
+  }
+
+  .cards {
+    margin-top: 280px;
+    margin-left: -15px;
+    width: 90%;
+    height: 930px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 30%);
+    gap: 32px 0px;
+  }
+
+  .intro__card {
+    width: 339px;
+    height: 259px;
+    padding-top: 3rem;
+    padding-left: 2rem;
+  }
+
+  .card {
+    width: 349px;
+    height: 259px;
+    margin-top: 5px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .hero__image {
+    width: 991.63px;
+    height: 936.92px;
+    background: {
+      image: url('../assets/image-hero-desktop.png');
+      repeat: no-repeat;
+    }
+    background-position: 284px -50px;
+    background-size: auto 100%;
+  }
+
+  .header {
+    width: 1109px;
+    &__logo {
+      width: 112px;
+      height: 28px;
+      margin: 38px 0 0 105px;
+    }
+    &__button {
+      width: 167px;
+      height: 56px;
+      margin: 24px -75px 0 0;
+    }
+  }
+  .intro {
+    margin-top: 115px;
+    width: 557px;
+    height: 359px;
+    margin-left: 85px;
+    &__title {
+      font-size: 56px;
+      line-height: 70.56px;
+      margin-bottom: 29px;
+    }
+    &__paragraph {
+      width: 445px;
+      font-size: 18px;
+      line-height: 28px;
+      margin-bottom: 40px;
+    }
+    &__button {
+      height: 63px;
+    }
+  }
+
+  .cards {
+    width: 1110px;
+    height: 748px;
+    margin-left: 50px;
+    margin-bottom: 40px;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 150px 30px;
+  }
+
+  .intro {
+    &__card {
+      width: 350px;
+      height: 322px;
+      font-size: 32px;
+      font-weight: 800;
+      line-height: 40px;
+    }
+  }
+
+  .card {
+    width: 350px;
+    height: 322px;
+    margin-bottom: 52px;
+  }
+}
